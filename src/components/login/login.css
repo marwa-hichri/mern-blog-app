@@ -1,0 +1,32 @@
+.containerl{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../assets/mountain1.jpg');
+    color: rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapperl{
+    height: 60vh;
+    width:25vw ;
+    border-radius:20px ;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+ 
+.wrapperl > h2{
+    color: #171097;
+    text-align: center;
+    margin:2.5rem 0 ;
+}
+
+
