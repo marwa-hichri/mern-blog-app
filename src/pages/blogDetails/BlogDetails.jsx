@@ -21,7 +21,7 @@ const BlogDetails = () => {
     const fetchBlogDetails = async () => {
       try {
         const options = { 'Authorization': `Bearer ${token}` }
-        const data = await request(`https://backend-blog-app-62dk.onrender.com/blog/find/${id}`, 'GET', options)
+        const data = await request(`/blog/find/${id}`, 'GET', options)
         setBlogDetails(data)
         setIsLiked(data.likes.includes(user._id))
       } catch (error) {
@@ -35,7 +35,7 @@ const BlogDetails = () => {
   const handleLikePost = async () => {
     try {
       const options = { "Authorization": `Bearer ${token}` }
-      await request(`https://backend-blog-app-62dk.onrender.com/blog/likeBlog/${id}`, "PUT", options)
+      await request(`/blog/likeBlog/${id}`, "PUT", options)
       setIsLiked(prev => !prev)
     } catch (error) {
       console.error(error)
@@ -46,7 +46,7 @@ const BlogDetails = () => {
   const handleDeleteBlog = async() => {
     try {
       const options = {"Authorization": `Bearer ${token}`}
-      await request(`https://backend-blog-app-62dk.onrender.com/blog/deleteBlog/${id}`, "DELETE", options)
+      await request(`/blog/deleteBlog/${id}`, "DELETE", options)
     } catch (error) {
       console.error(error)
     }
