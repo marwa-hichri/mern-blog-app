@@ -34,7 +34,7 @@ const Create = () => {
         formData.append("filename", filename)
         formData.append("image", img)
 
-        await fetch(`http://localhost:8585/upload`, {
+        await fetch(`https://backend-blog-app-62dk.onrender.com/upload`, {
           method: "POST",
           body: formData
         })
@@ -55,7 +55,7 @@ const Create = () => {
       }
 
 
-      const data = await request('/blog', "POST", options, body)
+      const data = await request('https://backend-blog-app-62dk.onrender.com/blog', "POST", options, body)
       navigate(`/blogDetails/${data._id}`)
 
     } catch (error) {

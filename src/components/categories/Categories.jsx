@@ -27,7 +27,7 @@ const Categories = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const data = await request('/blog/getAll', 'GET')
+        const data = await request('https://backend-blog-app-62dk.onrender.com/blog/getAll', 'GET')
         setBlogs(data)
         setFilteredBlogs(data)
       } catch (error) {
@@ -72,7 +72,7 @@ const Categories = () => {
               {filteredBlogs?.map((blog) => (
                 <div key={blog._id} className='blog'>
                   <Link to={`/blogDetails/${blog?._id}`}>
-                    <img src={`http://localhost:8585/images/${blog?.photo}`} />
+                    <img src={`https://backend-blog-app-62dk.onrender.com/images/${blog?.photo}`} />
                   </Link>
                   <div className='blogData'>
                     <div className='categoryAndMetadata'>

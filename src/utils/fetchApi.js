@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8585"
+const BASE_URL = "https://backend-blog-app-62dk.onrender.com"
 
 export const request = async (url, method, headers = {}, body = {}, isNotStringified = false) => {
     let res
